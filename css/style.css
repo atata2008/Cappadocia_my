@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'Balqis';
+    src: url('../fonts/balqis.woff2') format('woff2'),
+        url('../fonts/balqis.woff2') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    /*улучшает скорость загрузки*/
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'RobotoCondensed-Light';
+    src: url('../fonts/RobotoCondensed-Light.woff2') format('woff2'),
+        url('../fonts/RobotoCondensed-Light.woff2') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    /*улучшает скорость загрузки*/
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'RobotoCondensed-LightItalic';
+    src: url('../fonts/RobotoCondensed-LightItalic.woff2') format('woff2'),
+        url('../fonts/RobotoCondensed-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    /*улучшает скорость загрузки*/
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'RobotoCondensed-Regular';
+    src: url('../fonts/RobotoCondensed-Regular.woff2') format('woff2'),
+        url('../fonts/RobotoCondensed-Regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    /*улучшает скорость загрузки*/
+    font-display: swap;
+}
+
+/*Поменять модель паддингов - 
+поля считаются в сумме с шириной блока (?)*/
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    color: #000000;
+    font-family: 'RobotoCondensed-Light';
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.container {
+    /*для фиксации контента по определенной ширине*/
+    max-width: 1230px;
+    /*для равных отступов по краям*/
+    margin: 0 auto;
+    /* внутренние поля (стандартные)*/
+    padding: 0 15px;
+}
+
+header {
+    background-image: url("../images/header-bg.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    /* нижние две строчи для лучшего соответствия с макетом, чтобы видно было девушку,
+     а она внизу изображения*/
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    /*отступ сверху*/
+    padding-top: 72px;
+    font-family: 'RobotoCondensed-Regular';
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.nav__menu_item {
+    display: inline-block;
+}
+
+/*следующая комбинация позволяет пропустить (нашёл один+ нашел еще один, и потом маргин!) 
+пункт меню и следующим двум сделать отступ слува*/
+.nav__menu_item+.nav__menu_item {
+    margin-left: 52px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav__menu-link:hover {
+    text-decoration: underline;
+}
+/*Сформировать место для иконки телефона и попутно расширили место 
+кликабельности для набора номера*/
+.header__phone {
+    padding-left: 40px;
+    position: relative;
+}
+
+/*иконка телефона добавляется как псевдоэлемент (на позировании)*/
+.header__phone::before {
+    content: "";
+    /*позиция относительно родителя, у родителя см. position*/
+    position: absolute;
+    background-image: url(../images/phone-icone.svg);
+    width: 30px;
+    height: 30px;
+    left: 0;
+    /*при использовании position можно указать, что слева отступ 0*/
+}
+.header__title{
+    padding-top: 152px;
+    text-align: center;
+    font-size: 250px;
+    line-height: 334px;
+    font-family: 'Balqis';
+    font-weight: 300;
+
+}
+.header__title span{
+    display: block;
+    text-align: right;
+    font-family: 'RobotoCondensed-LightItalic';
+    font-weight: 300;
+font-size: 56px;
+line-height: 66px;
+/*двигаем-корректируем-"присобачиваем" как в макете*/
+margin-top: -66px;
+margin-right: 80px;
+}
