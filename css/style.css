@@ -62,6 +62,30 @@ body {
     padding: 0 15px;
 }
 
+.page-section {
+    margin: 200px 0;
+}
+
+.title {
+    font-size: 96px;
+    line-height: 128px;
+    font-family: 'Balqis';
+    color: #E2AB3F;
+    font-weight: 300;
+    margin-bottom: 100px;
+}
+
+.title span {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+    font-family: 'RobotoCondensed-LightItalic';
+    color: #000000;
+    display: block;
+    margin-top: -30px;
+    margin-left: 185px;
+}
+
 header {
     background-image: url("../images/header-bg.jpg");
     height: 100vh;
@@ -140,4 +164,28 @@ a {
     /*двигаем-корректируем-"присобачиваем" как в макете*/
     margin-top: -66px;
     margin-right: 80px;
+}
+
+.fairy-tail__slider{
+    width: 50%;
+    /*уже есть/сгенерирован js position: relative*/
+}
+
+.slick-btn{
+    position: absolute;
+top: 50%;
+transform: translate(-50%);
+z-index: 5;
+cursor: pointer;
+background-color: transparent;
+border: none;
+outline: none;
+}
+
+.slick-prev{
+    left: 0;
+    }
+
+.slick-next{
+    right: 0;
 }
