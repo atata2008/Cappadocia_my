@@ -46,12 +46,17 @@
     box-sizing: border-box;
 }
 
+ul {
+    list-style: none;
+}
+
 body {
     color: #000000;
     font-family: 'RobotoCondensed-Light';
     font-size: 18px;
     line-height: 21px;
 }
+
 
 .container {
     /*для фиксации контента по определенной ширине*/
@@ -63,7 +68,9 @@ body {
 }
 
 .page-section {
-    margin: 200px 0;
+    margin: 200px auto;
+    max-width: 1920px;
+    /* слайдер не выйдет за эту ширину*/
 }
 
 .title {
@@ -76,7 +83,6 @@ body {
 }
 
 .title span {
-    font-weight: 300;
     font-size: 24px;
     line-height: 28px;
     font-family: 'RobotoCondensed-LightItalic';
@@ -158,7 +164,6 @@ a {
     display: block;
     text-align: right;
     font-family: 'RobotoCondensed-LightItalic';
-    font-weight: 300;
     font-size: 56px;
     line-height: 66px;
     /*двигаем-корректируем-"присобачиваем" как в макете*/
@@ -166,26 +171,127 @@ a {
     margin-right: 80px;
 }
 
-.fairy-tail__slider{
+.fairy-tail__slider {
     width: 50%;
     /*уже есть/сгенерирован js position: relative*/
 }
 
-.slick-btn{
+.slick-btn {
     position: absolute;
-top: 50%;
-transform: translate(-50%);
-z-index: 5;
-cursor: pointer;
-background-color: transparent;
-border: none;
-outline: none;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
 }
 
-.slick-prev{
+.slick-prev {
     left: 0;
-    }
+}
 
-.slick-next{
+.slick-next {
     right: 0;
+}
+
+.fairy-tail__inner, .our-trip__inner {
+    position: relative;
+}
+
+.fairy-tail__container,
+.our-trip__container {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.fairy-tail__body {
+    width: 50%;
+    margin-left: auto;
+    padding-left: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.fairy-tail__body-title {
+    font-family: 'RobotoCondensed-Regular';
+}
+
+.fairy-tail__note {
+    padding: 10px 0;
+}
+
+fairy-tail__title span {
+    margin-left: 185px;
+}
+
+.our-trip__slider {
+    width: 50%;
+    margin-left: auto;
+}
+
+.our-trip__title span {
+    margin-left: 240px;
+}
+
+.our-trip__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    height: 100%;
+}
+
+.our-trip__list {
+    margin: 5px 0;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.our-trip__list li:first-child {
+    font-family: 'RobotoCondensed-Regular';
+    margin-bottom: 20px;
+}
+
+.our-trip__btn {
+    font-family: 'RobotoCondensed-Light';
+    font-size: 24px;
+    line-height: 28px;
+    padding: 11px 53px;
+    border: 1px solid #E2AB3F;
+}
+.our-trip__content{
+    width: 50%;
+    padding-right: 55px; /*ограничить ширину текста*/
+}
+.hotel__title span{
+    margin-left: 120px;
+}
+.hotel-inner{
+ display: flex;
+}
+
+.hotel__image{
+    margin-right: 100px;
+}
+.hotel__note{
+    margin-bottom: 20px;
+}
+
+.hotel__gallery{
+margin-top: 80px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+.hotel__gallery a{
+    margin-top: 50px;
 }
