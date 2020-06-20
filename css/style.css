@@ -195,7 +195,8 @@ a {
     right: 0;
 }
 
-.fairy-tail__inner, .our-trip__inner {
+.fairy-tail__inner,
+.our-trip__inner {
     position: relative;
 }
 
@@ -229,7 +230,7 @@ a {
     padding: 10px 0;
 }
 
-fairy-tail__title span {
+.fairy-tail__title span {
     margin-left: 185px;
 }
 
@@ -268,30 +269,103 @@ fairy-tail__title span {
     padding: 11px 53px;
     border: 1px solid #E2AB3F;
 }
-.our-trip__content{
+
+.our-trip__content {
     width: 50%;
-    padding-right: 55px; /*ограничить ширину текста*/
-}
-.hotel__title span{
-    margin-left: 120px;
-}
-.hotel-inner{
- display: flex;
+    padding-right: 55px;
+    /*ограничить ширину текста*/
 }
 
-.hotel__image{
+.hotel__title span {
+    margin-left: 120px;
+}
+
+.hotel-inner,
+.price-inner {
+    display: flex;
+}
+
+.hotel__image {
     margin-right: 100px;
 }
-.hotel__note{
+
+.hotel__note {
     margin-bottom: 20px;
 }
 
-.hotel__gallery{
-margin-top: 80px;
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
+.hotel__gallery {
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-.hotel__gallery a{
+
+.hotel__gallery a {
     margin-top: 50px;
+}
+
+.price__include-title,
+.price__not-include-title,
+.request__message {
+    font-size: 24px;
+    line-height: 28px;
+    font-family: 'RobotoCondensed-Regular';
+    margin-bottom: 50px;
+}
+
+.price__include {
+    margin-right: 70px;
+    width: 530px;
+}
+
+.price__list-item {
+    margin-bottom: 20px;
+}
+
+.price {
+    background-image: url(../images/balloon.png);
+    background-repeat: no-repeat;
+    background-position: center right 15%;
+}
+
+.price__not-iclude {
+    width: 30%;
+}
+
+.price__title span {
+    margin-left: 105px;
+}
+
+.request__inner {
+    display: flex;
+    justify-content: space-between;
+}
+.request__content{
+    text-align: center;
+}
+
+.request__date span,
+.request__price span {
+    font-size: 24px;
+    line-height: 28px;
+    font-family: 'RobotoCondensed-Light';
+    color: #000000;
+    display: block;
+    ;
+}
+
+.request__date span, .request__price span {
+    margin-left: 195px;
+    margin-top: -20px;
+    }
+
+.request__price{
+    margin-left: 120px;
+}
+.request__date title{
+    margin-bottom: 50px;
+   
+}
+.request__info{
+margin-top: 80px ;
 }
