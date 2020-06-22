@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'Balqis';
-    src: url('../fonts/balqis.woff2') format('woff2'),
-        url('../fonts/balqis.woff2') format('woff');
+    src: url('../fonts/balqis.woff2') format('woff2'), url('../fonts/balqis.woff2') format('woff');
     font-weight: 300;
     font-style: normal;
     /*улучшает скорость загрузки*/
@@ -10,8 +9,7 @@
 
 @font-face {
     font-family: 'RobotoCondensed-Light';
-    src: url('../fonts/RobotoCondensed-Light.woff2') format('woff2'),
-        url('../fonts/RobotoCondensed-Light.woff2') format('woff');
+    src: url('../fonts/RobotoCondensed-Light.woff2') format('woff2'), url('../fonts/RobotoCondensed-Light.woff2') format('woff');
     font-weight: 300;
     font-style: normal;
     /*улучшает скорость загрузки*/
@@ -20,8 +18,7 @@
 
 @font-face {
     font-family: 'RobotoCondensed-LightItalic';
-    src: url('../fonts/RobotoCondensed-LightItalic.woff2') format('woff2'),
-        url('../fonts/RobotoCondensed-LightItalic.woff') format('woff');
+    src: url('../fonts/RobotoCondensed-LightItalic.woff2') format('woff2'), url('../fonts/RobotoCondensed-LightItalic.woff') format('woff');
     font-weight: 300;
     font-style: italic;
     /*улучшает скорость загрузки*/
@@ -30,16 +27,17 @@
 
 @font-face {
     font-family: 'RobotoCondensed-Regular';
-    src: url('../fonts/RobotoCondensed-Regular.woff2') format('woff2'),
-        url('../fonts/RobotoCondensed-Regular.woff') format('woff');
+    src: url('../fonts/RobotoCondensed-Regular.woff2') format('woff2'), url('../fonts/RobotoCondensed-Regular.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     /*улучшает скорость загрузки*/
     font-display: swap;
 }
 
+
 /*Поменять модель паддингов - 
 поля считаются в сумме с шириной блока (?)*/
+
 *,
 *::after,
 *::before {
@@ -56,7 +54,6 @@ body {
     font-size: 18px;
     line-height: 21px;
 }
-
 
 .container {
     /*для фиксации контента по определенной ширине*/
@@ -116,8 +113,10 @@ header {
     display: inline-block;
 }
 
+
 /*следующая комбинация позволяет пропустить (нашёл один+ нашел еще один, и потом маргин!) 
 пункт меню и следующим двум сделать отступ слува*/
+
 .nav__menu_item+.nav__menu_item {
     margin-left: 52px;
 }
@@ -125,20 +124,25 @@ header {
 a {
     text-decoration: none;
     color: inherit;
+    font-size: calc(16px + (10 + 10 * 0.7) * ((100vw - 320px) / 1920));
 }
 
 .nav__menu-link:hover {
     text-decoration: underline;
 }
 
+
 /*Сформировать место для иконки телефона и попутно расширили место 
 кликабельности для набора номера*/
+
 .header__phone {
     padding-left: 40px;
     position: relative;
 }
 
+
 /*иконка телефона добавляется как псевдоэлемент (на позировании)*/
+
 .header__phone::before {
     content: "";
     /*позиция относительно родителя, у родителя см. position*/
@@ -151,20 +155,19 @@ a {
 }
 
 .header__title {
-    padding-top: 152px;
+    padding-top: calc(40px + (112 + 112 * 0.7) * ((100vh - 570px) / 1080));
     text-align: center;
-    font-size: 250px;
     line-height: 334px;
     font-family: 'Balqis';
     font-weight: 300;
-
+    font-size: calc(90px + (160 + 160 * 0.7) * ((100vw - 320px) / 1920));
 }
 
 .header__title span {
     display: block;
     text-align: right;
     font-family: 'RobotoCondensed-LightItalic';
-    font-size: 56px;
+    font-size: calc(25px + (31 + 31 * 0.7) * ((100vw - 320px) / 1920));
     line-height: 66px;
     /*двигаем-корректируем-"присобачиваем" как в макете*/
     margin-top: -66px;
@@ -289,10 +292,12 @@ a {
 
 .hotel__image {
     margin-right: 100px;
-  }
-.hotel-content{
+}
+
+.hotel-content {
     max-width: 55%;
 }
+
 .hotel__note {
     margin-bottom: 20px;
 }
@@ -374,7 +379,6 @@ a {
 
 .request__date {
     margin-bottom: 50px;
-
 }
 
 .request__info {
@@ -448,7 +452,7 @@ a {
     font-family: 'Balqis';
     margin-bottom: 50px;
     margin-top: 70px;
-    }
+}
 
 .footer__phone,
 .footer__email {
@@ -472,7 +476,7 @@ a {
     left: 0;
     top: -5px;
 }
- 
+
 .footer__phone::before {
     background-image: url(../images/footer-phone-icon.svg);
 }
@@ -481,6 +485,48 @@ a {
     background-image: url(../images/footer-mail-icon.svg);
 }
 
-.footer__social img{
+.footer__social img {
     margin-right: 7px;
+}
+
+@media(max-width: 700px) {
+    .header__phone {
+        padding-left: 40px;
+    }
+
+    .header__nav {
+        width: auto;
+    }
+
+    .header__phone::before {
+        height: 15px;
+        width: 15px;
+        background-size: cover;
+        margin-top: 8px;
+        margin-left: 35%;
+    }
+
+    .nav__menu {
+        width: 100%;
+    }
+
+    .header__top {
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav__menu_item+.nav__menu_item {
+        margin-left: 10px;
+    }
+
+    .header__title span {
+        margin: -100px 10px 0 0;
+
+    }
+}
+
+@media(max-width: 400px) {
+    .header__phone::before {
+        margin-left: 30%;}
     }
