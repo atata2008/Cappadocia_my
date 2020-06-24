@@ -457,6 +457,7 @@ a {
 .footer__phone,
 .footer__email {
     display: inline-block;
+    font-size: 18px;
     /*место для иконки*/
     padding-left: 40px;
     position: relative;
