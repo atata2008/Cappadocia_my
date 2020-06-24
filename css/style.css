@@ -124,8 +124,7 @@ header {
 a {
     text-decoration: none;
     color: inherit;
-    font-size: calc(16px + (10 + 10 * 0.7) * ((100vw - 320px) / 1920));
-}
+  }
 
 .nav__menu-link:hover {
     text-decoration: underline;
@@ -457,7 +456,6 @@ a {
 .footer__phone,
 .footer__email {
     display: inline-block;
-    font-size: 18px;
     /*место для иконки*/
     padding-left: 40px;
     position: relative;
